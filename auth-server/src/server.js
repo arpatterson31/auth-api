@@ -24,16 +24,21 @@ app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.use(logger);
+
+app.use('/api/vi', v1Routes);
+
 // Routes
 app.use(authRoutes);
 
 // Catchalls
-app.use(notFound);
+app.use('*', notFound);
 app.use(errorHandler);
 
 module.exports = {
   server: app,
-  start: (port) => {
+  start: port => {
+    if (!port) { throw new Error("Missing Port"); }
     app.listen(port, () => {
       console.log(`Server Up on ${port}`);
     });
