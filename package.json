@@ -5,7 +5,7 @@
   "main": "index.js",
   "devDependencies": {},
   "scripts": {
-    "test": "jest --verbose",
+    "test": "jest --verbose --detectOpenHandles",
     "test-watch": "jest --watchAll",
     "start": "node index.js",
     "watch": "nodemon index.js"
