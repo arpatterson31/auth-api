@@ -1,0 +1,39 @@
+{
+  "name": "auth-api",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest --verbose --detectOpenHandles",
+    "test-watch": "jest --watchAll",
+    "start": "node index.js",
+    "watch": "nodemon index.js"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arpatterson31/auth-api.git"
+  },
+  "keywords": [],
+  "author": "audrey patterson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arpatterson31/auth-api/issues"
+  },
+  "homepage": "https://github.com/arpatterson31/auth-api#readme",
+  "dependencies": {
+    "@code-fellows/supergoose": "^1.1.0",
+    "base-64": "^1.0.0",
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jest": "^26.6.3",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.6",
+    "morgan": "^1.10.0"
+  }
+}
